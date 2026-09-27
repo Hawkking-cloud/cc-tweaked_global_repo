@@ -1,9 +1,17 @@
-local api_files = {
+local needed_api_files = {
   "startup.lua",
 }
 
+if fs.exists("requirements") then
+  local requirements = fs.open("requirements","r").readAll()
+  for chunk in requirements:gmatch("([^\n]+)") do 
+    needed_api_files[#needed_api_files+1]=chunk
+  end 
+end 
+
+
 for _,file in ipairs(api_files) do
-  local url = ("https://cdn.jsdeliver.net/gh/Hawkking-cloud/cc-tweaked_global_repo@main/%s"):format(file)
+  local url = ("https://raw.githubusercontent.com/Hawkking-cloud/cc-tweaked_global_repo/main/%s"):format(file)
   local response = http.get(url)
   if response then 
     local content = response.readAll()
