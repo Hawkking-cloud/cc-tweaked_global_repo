@@ -5,7 +5,7 @@ local api_files = {
 if fs.exists("requirements") then
   local requirements = fs.open("requirements","r").readAll()
   for chunk in requirements:gmatch("([^\n]+)") do 
-    needed_api_files[#needed_api_files+1]=chunk
+    api_files[#api_files+1] = (chunk..".lua")
   end 
 end 
 
