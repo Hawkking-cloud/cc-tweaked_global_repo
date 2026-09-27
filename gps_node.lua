@@ -2,4 +2,6 @@ local args = { ... }
 
 assert(#args==3,"usage: \"./gps_node.lua x y z\"")
 
-os.run({},"rom/programs/gps.lua","host",args[0],args[1],args[2]);
+print(("starting gps node at %s, %s, %s"):format(args[1],args[2],args[3]))
+
+os.run({},"rom/programs/gps.lua","host",args[1],args[2],args[3]);
