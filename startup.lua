@@ -1,4 +1,4 @@
-local files = {
+local api_files = {
   "startup.lua",
 }
 
@@ -22,3 +22,7 @@ for _,file in ipairs(files) do
     print(("failed to fetch: %s"):format(file))
   end 
 end
+
+if fs.exists("h_startup.lua") then 
+  os.run({},"h_startup.lua"})
+end 
