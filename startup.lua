@@ -2,7 +2,7 @@ local api_files = {
   "startup.lua",
 }
 
-for _,file in ipairs(files) do
+for _,file in ipairs(api_files) do
   local url = ("https://cdn.jsdeliver.net/gh/Hawkking-cloud/cc-tweaked_global_repo@main/%s"):format(file)
   local response = http.get(url)
   if response then 
