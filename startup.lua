@@ -9,14 +9,14 @@ for _,file in ipairs(files) do
     local content = response.readAll()
     response.close()
 
-    local dir = fs.getDir(path)
+    local dir = fs.getDir(file)
     if dir ~= "" and not fs.exists(dir) then
       fs.makeDir(dir)
     end 
 
-    local f = fs.open(path,"w")
+    local f = fs.open(file,"w")
     f.write(content)
-    fs.close()
+    f.close()
     print((": %s"):format(file))
   else
     print(("failed to fetch: %s"):format(file))
