@@ -1,4 +1,4 @@
-local needed_api_files = {
+local api_files = {
   "startup.lua",
 }
 
