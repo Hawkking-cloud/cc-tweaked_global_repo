@@ -4,7 +4,7 @@ local files = {
 
 for _,file in ipairs(files) do
   local url = ("https://raw.githubusercontent.com/Hawkking-cloud/cc-tweaked_global_repo/main/%s"):format(file)
-  local response = http.gstartup.lua
+  local response = http.get(url)
   if response then 
     local content = response.readAll()
     response.close()
