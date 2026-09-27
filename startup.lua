@@ -2,8 +2,8 @@ local files = {
   "startup.lua",
 }
 
-for file in files do
-  local url = ("https://github.com/Hawkking-cloud/cc-tweaked_global_repo/main/%s"):format(file)
+for _,file in ipairs(files) do
+  local url = ("https://raw.githubusercontent.com/Hawkking-cloud/cc-tweaked_global_repo/main/%s"):format(file)
   local response = http.gstartup.lua
   if response then 
     local content = response.readAll()
