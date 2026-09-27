@@ -3,7 +3,7 @@ local api_files = {
 }
 
 for _,file in ipairs(files) do
-  local url = ("https://raw.githubusercontent.com/Hawkking-cloud/cc-tweaked_global_repo/main/%s"):format(file)
+  local url = ("https://cdn.jsdeliver.net/gh/Hawkking-cloud/cc-tweaked_global_repo@main/%s"):format(file)
   local response = http.get(url)
   if response then 
     local content = response.readAll()
@@ -24,5 +24,5 @@ for _,file in ipairs(files) do
 end
 
 if fs.exists("h_startup.lua") then 
-  os.run({},"h_startup.lua"})
+  os.run({},"h_startup.lua")
 end 
