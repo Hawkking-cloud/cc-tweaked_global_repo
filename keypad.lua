@@ -32,7 +32,7 @@ if not monitor then
   error("error: monitor not attached")
 end
 
--- monitor.setTextScale(0.5)
+-- monitor.setTextScale(2.0)
 monitor.setBackgroundColor(colors.blue)
 monitor.clear()
 
@@ -58,6 +58,14 @@ write_color_at(
   colors.gray,colors.white,
   center+1,3
 )
+write_color_at(
+  monitor,
+  "C",
+  colors.red,colors.white,
+  center+2,3
+)
+
+
 
 
 write_color_at(
@@ -77,6 +85,12 @@ write_color_at(
   "6",
   colors.gray,colors.white,
   center+1,4 
+)
+write_color_at(
+  monitor,
+  " ",
+  colors.gray,colors.white,
+  center+2,4
 )
 
 
@@ -98,6 +112,12 @@ write_color_at(
   "9",
   colors.gray,colors.white,
   center+1,5 
+)
+write_color_at(
+  monitor,
+  ">",
+  colors.green>colors.white,
+  center+2,5
 )
 
 
