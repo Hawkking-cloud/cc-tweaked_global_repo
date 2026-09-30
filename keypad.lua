@@ -19,7 +19,7 @@ end
 function write_color_at(monitor,text,background,foreground,x,y)
   monitor.setBackgroundColor(background)
   monitor.setTextColor(foreground)
-  monitor.setCursor(x,y)
+  monitor.setCursorPos(x,y)
   monitor.write(text)
 end 
 
@@ -37,7 +37,7 @@ monitor.setBackgroundColor(colors.blue)
 monitor.clear()
 
 local w,h = monitor.getSize()
-draw_rect(monitor,1,1,w-1,h-1,colors.lightGray,colors.black)
+draw_rect(monitor,2,2,w-1,h-1,colors.lightGray,colors.black)
 local center = math.ceil(w/2)
 
 write_color_at(
@@ -50,7 +50,7 @@ write_color_at(
   monitor,
   "2",
   colors.gray,colors.white,
-  center-1,2 
+  center,2 
 )
 write_color_at(
   monitor,
@@ -70,7 +70,7 @@ write_color_at(
   monitor,
   "5",
   colors.gray,colors.white,
-  center-1,3 
+  center,3 
 )
 write_color_at(
   monitor,
@@ -91,7 +91,7 @@ write_color_at(
   monitor,
   "8",
   colors.gray,colors.white,
-  center-1,4 
+  center,4 
 )
 write_color_at(
   monitor,
@@ -107,10 +107,26 @@ while true do
   if x == center - 1 then
     if y == 2 then 
       print("1")
+    elseif y == 3 then
+      print("2")
+    elseif y == 4 then
+      print("3")
     end
   elseif x == center then
-    print("a")
+    if y == 2 then 
+      print("4")
+    elseif y == 3 then
+      print("5")
+    elseif y == 4 then
+      print("6")
+    end
   elseif x == center+1 then
-    print("b")
+        if y == 2 then 
+      print("7")
+    elseif y == 3 then
+      print("8")
+    elseif y == 4 then
+      print("9")
+    end
   end
 end 
