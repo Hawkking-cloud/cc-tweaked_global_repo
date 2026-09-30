@@ -18,7 +18,7 @@ end
 
 function write_color_at(monitor,text,background,foreground,x,y)
   monitor.setBackgroundColor(background)
-  monitor.setForegroundColor(foreground)
+  monitor.setTextColor(foreground)
   monitor.setCursor(x,y)
   monitor.write(text)
 end 
