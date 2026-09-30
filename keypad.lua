@@ -26,7 +26,7 @@ end
 term.clear()
 term.setCursorBlink(false)
 print("keypad.lua ...")
-i
+
 local monitor = peripheral.find("monitor")
 if not monitor then 
   error("error: monitor not attached")
