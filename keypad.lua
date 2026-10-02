@@ -37,32 +37,31 @@ monitor.setBackgroundColor(colors.blue)
 monitor.clear()
 
 local w,h = monitor.getSize()
-draw_rect(monitor,2,2,w-1,h-1,colors.lightGray,colors.black)
-local center = math.ceil(w/2)
+local center = 4
 
 write_color_at(
   monitor,
   "1",
   colors.gray,colors.white,
-  center-1,3 
+  center-1,2 
 )
 write_color_at(
   monitor,
   "2",
   colors.gray,colors.white,
-  center,3 
+  center,2 
 )
 write_color_at(
   monitor,
   "3",
   colors.gray,colors.white,
-  center+1,3
+  center+1,2
 )
 write_color_at(
   monitor,
   "C",
   colors.red,colors.white,
-  center+2,3
+  center+2,2
 )
 
 
@@ -72,25 +71,25 @@ write_color_at(
   monitor,
   "4",
   colors.gray,colors.white,
-  center-1,4 
+  center-1,3 
 )
 write_color_at(
   monitor,
   "5",
   colors.gray,colors.white,
-  center,4 
+  center,3 
 )
 write_color_at(
   monitor,
   "6",
   colors.gray,colors.white,
-  center+1,4 
+  center+1,3 
 )
 write_color_at(
   monitor,
   " ",
   colors.gray,colors.white,
-  center+2,4
+  center+2,3
 )
 
 
@@ -99,25 +98,25 @@ write_color_at(
   monitor,
   "7",
   colors.gray,colors.white,
-  center-1,5 
+  center-1,4 
 )
 write_color_at(
   monitor,
   "8",
   colors.gray,colors.white,
-  center,5 
+  center,4 
 )
 write_color_at(
   monitor,
   "9",
   colors.gray,colors.white,
-  center+1,5 
+  center+1,4 
 )
 write_color_at(
   monitor,
   ">",
-  colors.green>colors.white,
-  center+2,5
+  colors.green,colors.white,
+  center+2,4
 )
 
 
