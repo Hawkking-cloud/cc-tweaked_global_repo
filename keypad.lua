@@ -140,7 +140,7 @@ write_color_at(
 
 while true do 
   local event, side, x, y = os.pullEvent("monitor_touch")
-
+  print(x,y)
   if x == center - 2 then
     if y == 4 then
       print("clear")
