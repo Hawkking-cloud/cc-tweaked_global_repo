@@ -141,36 +141,36 @@ write_color_at(
 while true do 
   local event, side, x, y = os.pullEvent("monitor_touch")
   print(x,y)
-  if x == center - 2 then
+  if x == 2 then
     if y == 4 then
       print("clear")
     end
-  elseif x == center - 1 then
+  elseif x == 3 then
     if y == 2 then 
-      print("4")
+      print("1")
     elseif y == 3 then
-      print("5")
-    elseif y == 4 then
-      print("6")
-    end
-  elseif x == center then
-    if y == 2 then 
       print("4")
-    elseif y == 3 then
-      print("5")
-    elseif y == 4 then
-      print("6")
-    end
-  elseif x == center+1 then
-        if y == 2 then 
+    elseif x == 4 then
       print("7")
-    elseif y == 3 then
+    end
+  elseif x == 4 then
+    if y == 2 then 
+      print("2")
+    elseif x == 3 then
+      print("5")
+    elseif x == 4 then
       print("8")
-    elseif y == 4 then
+    end
+  elseif x == 5 then
+        if y == 2 then 
+      print("3")
+    elseif x == 3 then
+      print("6")
+    elseif x == 4 then
       print("9")
     end
-  elseif x == center+2 then
-        if y == 4 then 
+  elseif y == 6 then
+        if x == 4 then 
           print("go")
         end
   end
