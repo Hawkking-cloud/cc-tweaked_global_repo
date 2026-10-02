@@ -30,6 +30,7 @@ print("keypad.lua ...")
 local monitor = peripheral.find("monitor")
 if not monitor then 
   error("error: monitor not attached")
+  -- monitor = term
 end
 
 -- monitor.setTextScale(2.0)
@@ -39,6 +40,14 @@ monitor.clear()
 local w,h = monitor.getSize()
 local center = 4
 
+
+
+write_color_at(
+  monitor,
+  " ",
+  colors.gray,colors.white,
+  center-2,2 
+)
 write_color_at(
   monitor,
   "1",
@@ -59,14 +68,19 @@ write_color_at(
 )
 write_color_at(
   monitor,
-  "C",
-  colors.red,colors.white,
+  " ",
+  colors.gray,colors.white,
   center+2,2
 )
 
 
 
-
+write_color_at(
+  monitor,
+  " ",
+  colors.gray,colors.white,
+  center-2,3 
+)
 write_color_at(
   monitor,
   "4",
@@ -93,7 +107,12 @@ write_color_at(
 )
 
 
-
+write_color_at(
+  monitor,
+  "C",
+  colors.red,colors.white,
+  center-2,4 
+)
 write_color_at(
   monitor,
   "7",
@@ -119,17 +138,20 @@ write_color_at(
   center+2,4
 )
 
-
 while true do 
   local event, side, x, y = os.pullEvent("monitor_touch")
 
-  if x == center - 1 then
+  if x == center - 2 then
+    if y == 4 then
+      print("clear")
+    end
+  elseif x == center - 1 then
     if y == 2 then 
-      print("1")
+      print("4")
     elseif y == 3 then
-      print("2")
+      print("5")
     elseif y == 4 then
-      print("3")
+      print("6")
     end
   elseif x == center then
     if y == 2 then 
@@ -147,5 +169,9 @@ while true do
     elseif y == 4 then
       print("9")
     end
+  elseif x == center+2 then
+        if y == 4 then 
+          print("go")
+        end
   end
 end 
